@@ -1,0 +1,40 @@
+{
+  "name": "north-group",
+  "version": "0.1.0",
+  "private": true,
+  "engines": {
+    "node": "24.x"
+  },
+  "scripts": {
+    "dev": "next dev",
+    "build": "bash scripts/check-forbidden-words.sh && next build",
+    "start": "next start",
+    "lint": "eslint",
+    "lint:words": "bash scripts/check-forbidden-words.sh"
+  },
+  "dependencies": {
+    "@vercel/analytics": "^2.0.1",
+    "@vercel/speed-insights": "^2.0.0",
+    "clsx": "^2.1.1",
+    "lucide-react": "^1.8.0",
+    "marked": "^18.0.2",
+    "motion": "^12.38.0",
+    "next": "16.2.3",
+    "react": "19.2.4",
+    "react-dom": "19.2.4",
+    "resend": "^6.10.0",
+    "tailwind-merge": "^3.5.0"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "^4.11.1",
+    "@playwright/test": "^1.59.1",
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "16.2.3",
+    "tailwindcss": "^4",
+    "typescript": "^5"
+  }
+}
