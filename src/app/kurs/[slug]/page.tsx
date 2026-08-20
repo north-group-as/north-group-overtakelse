@@ -235,16 +235,27 @@ export default async function KursDetailPage({ params }: PageProps) {
                   </div>
                 </div>
 
-                <Link
-                  href="#bestill"
-                  className="mt-8 inline-flex w-full items-center justify-center gap-2 rounded-full bg-green px-6 py-3.5 text-sm font-semibold text-navy-dark shadow-lg shadow-green/25 transition hover:bg-green-dark"
-                >
-                  {ctaLabel}
-                </Link>
+                {isDigital && course.externalUrl ? (
+                  <a
+                    href={course.externalUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-8 inline-flex w-full items-center justify-center gap-2 rounded-full bg-green px-6 py-3.5 text-sm font-semibold text-navy-dark shadow-lg shadow-green/25 transition hover:bg-green-dark"
+                  >
+                    Bestill kurs
+                  </a>
+                ) : (
+                  <Link
+                    href="#bestill"
+                    className="mt-8 inline-flex w-full items-center justify-center gap-2 rounded-full bg-green px-6 py-3.5 text-sm font-semibold text-navy-dark shadow-lg shadow-green/25 transition hover:bg-green-dark"
+                  >
+                    {ctaLabel}
+                  </Link>
+                )}
                 {isDigital ? (
                   <p className="mt-4 text-xs leading-relaxed text-navy-dark/55">
-                    Faktura sendes til selskapet etter bestilling. Tilgang er personlig og kan ikke
-                    deles.
+                    Kurset gjennomføres på vår e-læringsplattform Thinkific. Du blir sendt dit for å
+                    fullføre bestillingen.
                   </p>
                 ) : (
                   <p className="mt-4 text-xs leading-relaxed text-navy-dark/55">
@@ -259,38 +270,54 @@ export default async function KursDetailPage({ params }: PageProps) {
 
       <section
         id="bestill"
-        aria-label="Bestillingsskjema"
+        aria-label={isDigital ? "Bestill kurs" : "Bestillingsskjema"}
         className="bg-gray-50 py-24 lg:py-32"
       >
         <Container>
+          {isDigital && course.externalUrl ? (
+            <div className="mx-auto max-w-2xl text-center">
+              <p className="text-[13px] font-semibold uppercase tracking-[0.24em] text-navy-dark mb-5">
+                Bestill
+              </p>
+              <h2 className="font-display font-extrabold tracking-tight text-navy-dark text-[clamp(1.875rem,3.5vw+1rem,2.75rem)] leading-[1.05]">
+                {course.title}
+              </h2>
+              <p className="mt-6 text-base leading-relaxed text-navy-dark/65 font-light">
+                Kurset kjøpes og gjennomføres på vår e-læringsplattform Thinkific.
+              </p>
+              <a
+                href={course.externalUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-8 inline-flex items-center justify-center gap-2 rounded-full bg-green px-8 py-3.5 text-sm font-semibold text-navy-dark shadow-lg shadow-green/25 transition hover:bg-green-dark"
+              >
+                Bestill kurs
+              </a>
+            </div>
+          ) : (
           <div className="grid gap-12 lg:grid-cols-12 lg:gap-16">
             <FadeIn className="lg:col-span-5">
               <p className="text-[13px] font-semibold uppercase tracking-[0.24em] text-navy-dark mb-5">
-                {isDigital ? "Bestill" : "Be om tilbud"}
+                Be om tilbud
               </p>
               <h2 className="font-display font-extrabold tracking-tight text-navy-dark text-[clamp(1.875rem,3.5vw+1rem,2.75rem)] leading-[1.05]">
                 {course.title}
               </h2>
               <p className="mt-6 text-base leading-relaxed text-navy-dark/65 font-light max-w-md">
-                {isDigital
-                  ? "Fyll ut skjemaet, så kontakter vi deg med bestillingsdetaljer og fakturainformasjon."
-                  : "Vi setter sammen et tilbud tilpasset antall deltakere, lokasjon og innhold."}
+                Vi setter sammen et tilbud tilpasset antall deltakere, lokasjon og innhold.
               </p>
             </FadeIn>
             <FadeIn delay={0.1} className="lg:col-span-7">
               <ContactForm
-                title={isDigital ? "Bestill kurset" : "Be om tilbud"}
-                description={
-                  isDigital
-                    ? `Bestilling av "${course.title}". Vi tar kontakt med faktura og påloggingsdetaljer.`
-                    : `Forespørsel om "${course.title}". Vi foreslår dato, lokasjon og pris.`
-                }
+                title="Be om tilbud"
+                description={`Forespørsel om "${course.title}". Vi foreslår dato, lokasjon og pris.`}
                 defaultSubject={course.title}
                 variant="course"
                 courseSlug={course.slug}
               />
             </FadeIn>
           </div>
+          )}
         </Container>
       </section>
 

@@ -131,13 +131,25 @@ function CourseCard({ course, index }: { course: Course; index: number }) {
             {course.duration}
           </p>
         </div>
-        <Link
-          href={`/kurs/${course.slug}/`}
-          className="inline-flex items-center gap-1 text-sm font-semibold text-green-dark transition-colors hover:text-green"
-        >
-          {course.type === "digital" ? "Bestill digitalt" : "Les mer"}
-          <ArrowRight className="h-4 w-4" aria-hidden />
-        </Link>
+        {course.type === "digital" && course.externalUrl ? (
+          <a
+            href={course.externalUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-1 text-sm font-semibold text-green-dark transition-colors hover:text-green"
+          >
+            Bestill kurs
+            <ArrowRight className="h-4 w-4" aria-hidden />
+          </a>
+        ) : (
+          <Link
+            href={`/kurs/${course.slug}/`}
+            className="inline-flex items-center gap-1 text-sm font-semibold text-green-dark transition-colors hover:text-green"
+          >
+            {course.type === "digital" ? "Bestill digitalt" : "Les mer"}
+            <ArrowRight className="h-4 w-4" aria-hidden />
+          </Link>
+        )}
       </div>
     </FadeIn>
   );

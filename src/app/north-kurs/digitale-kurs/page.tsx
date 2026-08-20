@@ -37,14 +37,14 @@ const HOW_IT_WORKS = [
   {
     icon: Laptop,
     step: "01",
-    title: "Bestill kurset",
-    body: "Velg kurset du trenger. Faktura sendes til selskapet etter bestilling.",
+    title: "Bestill kurs",
+    body: "Velg kurset du trenger og kjøp det på vår e-læringsplattform Thinkific.",
   },
   {
     icon: Clock,
     step: "02",
     title: "Ta kurset i eget tempo",
-    body: "Logg inn når det passer deg. Pause og fortsett der du slapp, så ofte du trenger.",
+    body: "Logg inn på Thinkific når det passer deg. Pause og fortsett der du slapp, så ofte du trenger.",
   },
   {
     icon: FileCheck,
@@ -148,13 +148,15 @@ export default function DigitaleKursPage() {
                   ) : null}
 
                   <div className="mt-auto flex flex-wrap items-center gap-3 pt-7">
-                    <Link
-                      href={`/kurs/${course.slug}/`}
+                    <a
+                      href={course.externalUrl ?? `/kurs/${course.slug}/`}
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="inline-flex items-center gap-2 rounded-full bg-green px-6 py-3 text-sm font-semibold text-navy-dark shadow-lg shadow-green/25 transition hover:bg-green-dark"
                     >
-                      Les mer og bestill
+                      Bestill kurs
                       <ArrowRight className="h-4 w-4" aria-hidden />
-                    </Link>
+                    </a>
                     <span className="text-[11px] font-semibold uppercase tracking-[0.18em] text-navy-dark/70">
                       {course.duration}
                     </span>

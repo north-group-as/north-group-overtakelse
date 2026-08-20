@@ -67,6 +67,7 @@ export const courses: Course[] = [
     ],
     featured: true,
     image: "/images/kurs/fse-med-forstehjelp.webp",
+    externalUrl: "https://north-s-site-ce22.thinkific.com/",
   },
   {
     slug: "forstehjelp",
@@ -94,6 +95,7 @@ export const courses: Course[] = [
     ],
     featured: true,
     image: "/images/kurs/forstehjelp.webp",
+    externalUrl: "https://north-s-site-ce22.thinkific.com/",
   },
   {
     slug: "forstehjelp-dhlr",
