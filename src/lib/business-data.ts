@@ -13,7 +13,7 @@ export const BUSINESS = {
   headerPhone: "+4747993333",
   headerPhoneDisplay: "749 99 333",
   headerPhoneHref: "tel:+4747993333",
-  headerPhoneInstruction: "Tast 4",
+  headerPhoneInstruction: "Tastevalg 3-4",
   // Direkte til Kristoffer (gründer og HR-rådgiver)
   kristofferPhone: "+4792816581",
   kristofferPhoneDisplay: "928 16 581",

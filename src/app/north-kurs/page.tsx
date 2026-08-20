@@ -146,6 +146,21 @@ export default function NorthKursPage() {
           <ul className="mt-16 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
             {featured.map((course, i) => (
               <FadeIn as="li" className="group relative flex h-full flex-col overflow-hidden rounded-2xl border border-navy-dark/10 bg-white transition-all duration-300 hover:-translate-y-1 hover:border-green/40 hover:shadow-lg hover:shadow-navy-dark/5" key={course.slug} delay={i * 0.06}>
+                  {course.type === "digital" && course.externalUrl ? (
+                    <a
+                      href={course.externalUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="absolute inset-0 z-10"
+                      aria-label={`Bestill ${course.title}`}
+                    />
+                  ) : (
+                    <Link
+                      href={`/kurs/${course.slug}/#bestill`}
+                      className="absolute inset-0 z-10"
+                      aria-label={`Be om tilbud på ${course.title}`}
+                    />
+                  )}
                   {course.image ? (
                     <div className="relative aspect-[16/9] w-full overflow-hidden bg-gray-50">
                       <Image
@@ -173,16 +188,19 @@ export default function NorthKursPage() {
                     {course.description}
                   </p>
                   <div className="mt-auto flex items-end justify-between border-t border-navy-dark/5 pt-5">
-                    <span className="font-display text-2xl font-extrabold text-navy-dark leading-none">
+                    <span
+                      className={
+                        course.priceValue === null
+                          ? "font-display text-base font-extrabold text-navy-dark leading-tight"
+                          : "font-display text-2xl font-extrabold text-navy-dark leading-none"
+                      }
+                    >
                       {course.price}
                     </span>
-                    <Link
-                      href={`/kurs/${course.slug}/`}
-                      className="inline-flex items-center gap-1.5 text-sm font-semibold text-green-dark transition-colors hover:text-green"
-                    >
-                      {course.type === "digital" ? "Bestill digitalt" : "Be om tilbud"}
+                    <span className="inline-flex items-center gap-1.5 text-sm font-semibold text-green-dark transition-colors group-hover:text-green">
+                      {course.type === "digital" ? "Bestill kurs" : "Be om tilbud"}
                       <ArrowRight className="h-4 w-4" aria-hidden />
-                    </Link>
+                    </span>
                   </div>
                   </div>
               </FadeIn>

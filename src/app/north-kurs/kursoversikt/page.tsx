@@ -77,7 +77,7 @@ export default function KursoversiktPage() {
             </h2>
           </FadeIn>
 
-          <ul className="mt-14 grid gap-5 md:grid-cols-2">
+          <ul className="mt-14 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
             {digital.map((course, i) => (
               <CourseCard key={course.slug} course={course} index={i} />
             ))}
@@ -109,7 +109,7 @@ export default function KursoversiktPage() {
             </p>
           </FadeIn>
 
-          <ul className="mt-14 grid gap-5 md:grid-cols-2">
+          <ul className="mt-14 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
             {physical.map((course, i) => (
               <CourseCard key={course.slug} course={course} index={i} />
             ))}
@@ -130,7 +130,12 @@ export default function KursoversiktPage() {
 
 function CourseCard({ course, index }: { course: Course; index: number }) {
   return (
-    <FadeIn as="li" className="group flex h-full flex-col overflow-hidden rounded-2xl border border-navy-dark/10 bg-white transition-all duration-300 hover:-translate-y-1 hover:border-green/40 hover:shadow-lg hover:shadow-navy-dark/5" delay={index * 0.05}>
+    <FadeIn as="li" className="group relative flex h-full flex-col overflow-hidden rounded-2xl border border-navy-dark/10 bg-white transition-all duration-300 hover:-translate-y-1 hover:border-green/40 hover:shadow-lg hover:shadow-navy-dark/5" delay={index * 0.05}>
+        <Link
+          href={`/kurs/${course.slug}/`}
+          className="absolute inset-0 z-10"
+          aria-label={`Les mer om ${course.title}`}
+        />
         {course.image ? (
           <div className="relative aspect-[16/9] w-full overflow-hidden bg-gray-50">
             <Image
@@ -174,13 +179,10 @@ function CourseCard({ course, index }: { course: Course; index: number }) {
               {course.price}
             </span>
           </div>
-          <Link
-            href={`/kurs/${course.slug}/`}
-            className="inline-flex items-center gap-1.5 text-sm font-semibold text-green-dark transition-colors hover:text-green"
-          >
+          <span className="inline-flex items-center gap-1.5 text-sm font-semibold text-green-dark transition-colors group-hover:text-green">
             Les mer
             <ArrowRight className="h-4 w-4" aria-hidden />
-          </Link>
+          </span>
         </div>
         </div>
     </FadeIn>
