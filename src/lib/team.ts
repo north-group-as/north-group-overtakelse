@@ -14,7 +14,7 @@ export interface TeamMember {
 export const team: TeamMember[] = [
   {
     name: "Kristoffer Holand",
-    role: "Gründer og leder",
+    role: "Gründer, leder og regnskap",
     image: "/images/team/kristoffer-holand.webp",
     email: "kristoffer@northpersonnel.no",
     phone: "+47 928 16 581",

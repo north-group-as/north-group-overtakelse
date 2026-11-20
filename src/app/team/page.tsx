@@ -172,7 +172,7 @@ export default function TeamPage() {
             </h2>
             <p className="mt-5 text-base leading-relaxed text-navy-dark/60 font-light max-w-2xl">
               Samy sikrer at hjulene går rundt. Han koordinerer driftsoppgaver og logistikk,
-              og jobber tett med alle ledd i organisasjonen.
+              mens Kristoffer har ansvaret for regnskap, lønn og fakturering.
             </p>
           </FadeIn>
 

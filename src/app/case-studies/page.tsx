@@ -87,7 +87,7 @@ const CASE_STUDIES = [
       "Ren økonomirapportering klargjort for revisjon",
     ],
     duration: "6 uker fra oppstart til ferdig rutine",
-    contact: "Kristoffer Holand, Gründer og leder",
+    contact: "Kristoffer Holand, Regnskap",
     quote:
       "Vi fikk orden på økonomien fra første dag. Nå har vi overskudd til å drive virksomheten, ikke bare holde orden på tallene.",
     authorRole: "Daglig leder, Produksjonsbedrift (Innlandet)",
