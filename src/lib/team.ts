@@ -43,16 +43,6 @@ export const team: TeamMember[] = [
     order: 3,
   },
   {
-    name: "Katarzyna Kubacka",
-    role: "Økonomikonsulent",
-    image: "/images/team/katarzyna-kubacka.webp",
-    email: "katarzyna@northgroup.no",
-    phone: "+47 467 06 767",
-    phoneHref: "tel:+4746706767",
-    bio: "Katarzyna har mastergrad i juss og er i sluttfasen av autorisasjonsløpet som statsautorisert regnskapsfører. Ansvarlig for regnskap, lønn, fakturering og økonomisk rapportering.",
-    order: 4,
-  },
-  {
     name: "Samy Adolfsen",
     role: "Driftskoordinator",
     image: "/images/team/samy-adolfsen.webp",

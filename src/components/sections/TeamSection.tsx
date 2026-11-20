@@ -124,8 +124,14 @@ export default function TeamSection() {
                   <p className="mt-0.5 text-[11px] font-medium text-navy-dark/70 truncate">
                     {m.role}
                   </p>
+                  {m.phoneHref && m.phone ? (
+                    <a href={m.phoneHref} className="mt-1.5 inline-flex items-center gap-1.5 text-[12px] text-navy-dark/60 hover:text-green-dark transition-colors">
+                      <Phone className="h-3 w-3 shrink-0" aria-hidden />
+                      <span>{m.phone}</span>
+                    </a>
+                  ) : null}
                 </div>
-              
+
             </FadeIn>
           ))}
         </ul>

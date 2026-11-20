@@ -171,9 +171,8 @@ export default function TeamPage() {
               Drift og økonomi
             </h2>
             <p className="mt-5 text-base leading-relaxed text-navy-dark/60 font-light max-w-2xl">
-              Samy og Katarzyna sikrer at hjulene går rundt. Samy koordinerer driftsoppgaver
-              og logistikk, mens Katarzyna holder økonomien i orden – fra fakturering
-              og lønn til regnskap og rapportering.
+              Samy sikrer at hjulene går rundt. Han koordinerer driftsoppgaver og logistikk,
+              og jobber tett med alle ledd i organisasjonen.
             </p>
           </FadeIn>
 

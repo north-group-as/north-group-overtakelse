@@ -80,14 +80,14 @@ const CASE_STUDIES = [
     challenge:
       "En liten produksjonsbedrift hadde vokst raskt og trengte hjelp til å rydde opp i økonomiske prosesser. Manglende rutiner for lønn og fakturering hadde ført til feil og misnøye blant ansatte.",
     solution:
-      "North Group gjennomgikk eksisterende rutiner og innførte systematiske prosesser for lønn, fakturering og rapportering. Katarzyna Kubacka fra North Group bistod med implementering og opplæring av eksisterende administrasjon.",
+      "North Group gjennomgikk eksisterende rutiner og innførte systematiske prosesser for lønn, fakturering og rapportering. North Group bistod også med implementering og opplæring av eksisterende administrasjon.",
     results: [
       "Null feil i lønnskjøring etter 60 dager",
       "Fornøyde ansatte med riktig lønn til rett tid",
       "Ren økonomirapportering klargjort for revisjon",
     ],
     duration: "6 uker fra oppstart til ferdig rutine",
-    contact: "Katarzyna Kubacka, Økonomikonsulent",
+    contact: "Kristoffer Holand, Gründer og leder",
     quote:
       "Vi fikk orden på økonomien fra første dag. Nå har vi overskudd til å drive virksomheten, ikke bare holde orden på tallene.",
     authorRole: "Daglig leder, Produksjonsbedrift (Innlandet)",
