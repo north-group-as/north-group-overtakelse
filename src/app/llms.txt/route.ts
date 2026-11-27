@@ -50,6 +50,7 @@ export function GET(): Response {
 
 ## Annet
 
+- [Fulltekstversjon for språkmodeller](${url}/llms-full.txt)
 - [Full sitemap](${url}/sitemap.xml)
 - [Personvern](${url}/personvern/)
 - [Vilkår](${url}/vilkar/)

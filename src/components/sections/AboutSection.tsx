@@ -44,6 +44,12 @@ export default function AboutSection() {
               og personlig oppfølging av både kunder og medarbeidere.
             </p>
 
+            <p className="mt-4 text-base leading-relaxed text-navy-dark/55 font-light max-w-xl">
+              I dag består teamet av 8 spesialister med kontor i Frydenbergveien 46b i Oslo. Over
+              500 elektrikere har fullført FSE- og førstehjelpskurs hos North, og vi rekrutterer
+              elektrikere, prosjektledere og kraftingeniører til bedrifter i hele Norge.
+            </p>
+
             <div className="mt-10 flex gap-8">
               {[
                 { value: 2015, label: "Grunnlagt", grouped: false },

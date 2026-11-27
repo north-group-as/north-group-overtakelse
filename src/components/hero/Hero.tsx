@@ -73,8 +73,10 @@ export default function Hero() {
           </p>
 
           <p className="mx-auto mt-6 max-w-2xl text-base font-light leading-relaxed text-white/75 md:text-lg">
-            Spesialister innen rekruttering, HR-tjenester og godkjente sikkerhetskurs. Tett
-            oppfølging siden 2015.
+            North Group AS er et Oslo-basert selskap som siden 2015 har hjulpet bedrifter i
+            bygg-, anleggs- og elektrobransjen med rekruttering, HR-tjenester og godkjente
+            sikkerhetskurs. Over 500 elektrikere har tatt FSE- og førstehjelpskurs hos oss, og
+            digitalt FSE-kurs koster kr 699. Du får en fast kontaktperson og svar innen 24 timer.
           </p>
 
           <div className="mt-10 flex flex-col items-center justify-center gap-3 sm:flex-row">
