@@ -1,5 +1,5 @@
 /**
- * FAQ-data: én kilde for /faq, forsiden og JSON-LD (FAQPage).
+ * FAQ-data: én kilde for /faq, /faq/[kategori], forsiden, llms-full.txt og JSON-LD (FAQPage).
  */
 
 export interface FaqItem {
@@ -10,6 +10,7 @@ export interface FaqItem {
 export interface FaqCategory {
   heading: string;
   id: string;
+  description: string;
   items: FaqItem[];
 }
 
@@ -17,6 +18,8 @@ export const FAQ_CATEGORIES: FaqCategory[] = [
   {
     heading: "Kurs og sertifisering",
     id: "kurs",
+    description:
+      "Svar på vanlige spørsmål om FSE-kurs, varme arbeider, førstehjelp og andre sertifiseringer.",
     items: [
       {
         question: "Hva er FSE-kurs og hvem trenger det?",
@@ -63,6 +66,8 @@ export const FAQ_CATEGORIES: FaqCategory[] = [
   {
     heading: "Rekruttering",
     id: "rekruttering",
+    description:
+      "Svar på vanlige spørsmål om rekrutteringsprosessen, kostnader, faggrupper og internasjonal rekruttering.",
     items: [
       {
         question: "Hvilke faggrupper rekrutterer dere?",
@@ -94,6 +99,8 @@ export const FAQ_CATEGORIES: FaqCategory[] = [
   {
     heading: "HR-tjenester",
     id: "hr-tjenester",
+    description:
+      "Svar på vanlige spørsmål om HR-bistand, medarbeidersamtaler, oppsigelser og ekstern HR-partner.",
     items: [
       {
         question: "Hvilke HR-tjenester tilbyr dere?",
@@ -122,6 +129,8 @@ export const FAQ_CATEGORIES: FaqCategory[] = [
   {
     heading: "Generelt om North Group",
     id: "generelt",
+    description:
+      "Svar på generelle spørsmål om selskapet, lokasjon, kontakttider og geografisk dekning.",
     items: [
       {
         question: "Hvem er North Group?",
