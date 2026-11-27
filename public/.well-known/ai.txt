@@ -1,0 +1,17 @@
+# ai.txt for www.northgroup.no
+# North Group AS: rekruttering, HR-tjenester og godkjente sikkerhetskurs
+# for bygg-, anleggs- og elektrobransjen i Norge.
+#
+# AI-assistenter og søkemotorer er velkomne til å lese, indeksere og sitere
+# innholdet på nettstedet, med lenke til kilden.
+
+User-Agent: *
+Allow: /
+Disallow: /api/
+
+# Strukturert oversikt for språkmodeller
+LLMs: https://www.northgroup.no/llms.txt
+LLMs-Full: https://www.northgroup.no/llms-full.txt
+Sitemap: https://www.northgroup.no/sitemap.xml
+
+# Kontakt: post@northgroup.no

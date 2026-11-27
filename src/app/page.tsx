@@ -8,6 +8,8 @@ import ValuesSection from "@/components/sections/ValuesSection";
 import CoursesSection from "@/components/sections/CoursesSection";
 import TeamSection from "@/components/sections/TeamSection";
 import ContactSection from "@/components/sections/ContactSection";
+import KursHowToSection from "@/components/sections/KursHowToSection";
+import HomeFaqSection from "@/components/sections/HomeFaqSection";
 import VideoSchemaJsonLd from "@/components/seo/VideoSchemaJsonLd";
 
 const STORY_VIDEO = {
@@ -61,6 +63,8 @@ export default function Home() {
       <AboutSection />
       <ValuesSection />
       <CoursesSection />
+      <KursHowToSection />
+      <HomeFaqSection />
       <TeamSection />
       <ContactSection />
     </>
